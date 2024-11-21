@@ -7,9 +7,9 @@ import org.springframework.stereotype.Service;
 public class ShippingService {
     public double shipment(Order order) {
         double amount = OrderService.calculateDiscount(order);
-        if(amount < 99.99) {
+        if(amount < 100.0) {
             return 20.00;
-        } else if (amount < 199.99) {
+        } else if (amount < 200.00) {
             return 12.00;
         }
         return 0.0;
